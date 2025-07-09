@@ -1,0 +1,236 @@
+/* HOME */
+#home {
+  display: flex;
+  min-height: calc(90vh - 136px);
+  position: relative;
+}
+
+#cta {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 5%;
+}
+
+#cta .title {
+  color: #1d1d1d;
+  font-size: 4rem;
+}
+
+#cta .title span{
+  color: #e9a209;
+}
+
+#cta .description {
+  font-size: 1.2rem;
+}
+
+#cta_buttons {
+  display: flex;
+  gap: 24px;
+}
+
+#cta_buttons a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+#phone_button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 14px;
+  font-weight: 500;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+#phone_button button {
+  box-shadow: none;
+}
+
+#banner {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  width: 70%;
+  z-index: 2;
+}
+
+#banner img{
+  height: 55%;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+/* .shape {
+  background-color: #ffe8b4;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  border-radius: 40% 30% 0% 20%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+} */
+
+@media screen and (max-width: 1170px) {
+
+  #home{
+      min-height: 100%;
+      padding-top: 0px;
+  }
+
+  #banner,
+  #banner img,
+  #home.shape{
+      display: none;
+  }
+  
+  #cta{
+      width: 100%;
+      text-align: center;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px){
+  #cta_buttons{
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* MENU */
+#menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+#dishes_burguer, #dishes_combos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 18px;
+  width: 25%;
+  padding: 20px;
+  background-color: #ffff;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dish_heart {
+  position: absolute;
+  background-color: #e9a209;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.563rem;
+  color: #ffff;
+  width: 60px;
+  height: 60px;
+  right: -5px;
+  top: -5px;
+  border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dish_description {
+  color: #434343;
+  text-align: center;
+}
+
+.dish_rate {
+  color: #e9a209;
+}
+
+.dish_price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dish_image {
+  height: 180px;
+  width: fit-content;
+  border-radius: 10px;
+  transition: .2s ease;
+}
+
+#menu_pedido {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ margin-top: 10px;
+ position: sticky;
+}
+
+#submenu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+#submenu a {
+  text-decoration: none;
+  color: #434343;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .dish img{
+      height: 100px;
+      transition: .2s ease;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #dishes_burguer, #dishes_combos{
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .dish{
+      width: calc(50% - 12px);
+  }
+
+  .dish img{
+      height: 80px;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .dish{
+      width: 100%;
+  }
+
+  .dish img{
+      height: 80px;
+  }
+
+  #menu .section_subtitle{
+      text-align: center;
+  }
+  #submenu{
+      gap: 15px;
+  }
+}
